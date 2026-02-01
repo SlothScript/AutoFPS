@@ -36,15 +36,6 @@ frame:SetScript("OnEvent", function()
     end
 
     MoveFPS(FramerateMoverDB.x, FramerateMoverDB.y)
-
-    fps:SetScript("OnDragStart", fps.StartMoving)
-    fps:SetScript("OnDragStop", function(self)
-        self:StopMovingOrSizing()
-        local _, _, _, x, y = self:GetPoint()
-        FramerateMoverDB.x = x
-        FramerateMoverDB.y = y
-        print("AutoFPS: moved to", x, y)
-    end)
 end)
 
 SLASH_AUTOFPS1 = "/frpos"
