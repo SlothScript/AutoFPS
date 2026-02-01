@@ -1,0 +1,6 @@
+## Interface: 20505
+## Title: AutoFPS
+## Notes: Enables the FPS counter and allows repositioning
+## SavedVariables: FramerateMoverDB
+
+autofps.lua
