@@ -19,7 +19,7 @@ local function MoveFPS(x, y)
     if not fps then return end
 
     fps:ClearAllPoints()
-    fps:SetPoint("CENTER", UIParent, "TOP", x, y)
+    fps:SetPoint("CENTER", UIParent, "TOP", x, y - 15)
 
     FramerateMoverDB.x = x
     FramerateMoverDB.y = y
@@ -36,11 +36,6 @@ frame:SetScript("OnEvent", function()
     end
 
     MoveFPS(FramerateMoverDB.x, FramerateMoverDB.y)
-
-    fps:SetMovable(true)
-    fps:EnableMouse(true)
-    fps:RegisterForDrag("LeftButton")
-    fps:SetClampedToScreen(true)
 
     fps:SetScript("OnDragStart", fps.StartMoving)
     fps:SetScript("OnDragStop", function(self)
